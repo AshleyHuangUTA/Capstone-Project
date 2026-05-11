@@ -78,26 +78,13 @@ Pearson correlation between brand-level store sales and distance to 8 competitor
 | **WEAK** (loses to rival when nearby) | CAUTION — flag for review | REDUCE — rival compounds loss |
 | **Neutral** | GROW — standard | REDUCE — standard |
 
-> **Note on synthetic data:** The 120-store synthetic dataset does not produce statistically significant Pearson correlations on its own. The final competition cell includes a hardcoded Shampoos and Conditioners example showing exactly how the output looks — matching the presentation.
+> **Note on synthetic data:** As the synthetic dataset doesn't have enough data to enable this correlation part to work, I created an extra dataset to show how this part incorporates into the optimization, as shown in the PowerPoint.
 
 ---
 
-## Repo Contents
+**To run in Colab:** Upload baby_care_synthetic files, then update the load cell:
 
-```
-|- Capstone_Model_With_Synthetic_Dataset.ipynb   <- Main notebook
-|- baby_care_synthetic_v2.csv                    <- Synthetic dataset (120 stores)
-|- README.md
-```
-
-**To run in Colab:** Upload both files, then update the load cell:
-```python
-flat = pd.read_csv('/content/baby_care_synthetic_v2.csv')
-```
-
----
-
-## Tech Stack
+## Libraries  
 
 `Python` · `pandas` · `NumPy` · `scikit-learn` (LassoCV, ElasticNetCV, KMeans, StandardScaler) · `Gurobi` · `scipy.stats` · `seaborn` · `matplotlib` · `plotly` · `statsmodels` · `geopy`
 
@@ -105,10 +92,8 @@ flat = pd.read_csv('/content/baby_care_synthetic_v2.csv')
 
 ## Data Note
 
-All data in this repo is **synthetic** — generated to match the structure and statistical properties of real retail data without exposing any proprietary information. Store demographics, sales figures, and competitor distances are all simulated.
+All data in this repo is **synthetic** — generated to match the structure and statistical properties of real retail data without exposing any sponsor's information. Store demographics, sales figures, and competitor distances are all simulated.
 
 ---
 
-## Run in Colab
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AshleyHuangUTA/Capstone-Project/blob/main/Capstone_Model_With_Synthetic_Dataset.ipynb)
